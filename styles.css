@@ -1,0 +1,337 @@
+/* Global Styles */
+@font-face {
+    font-family: 'lato-light';
+    src: url('lato-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('lato.ttf') format('truetype');
+}
+
+
+
+h1, h2, h3 {
+    font-family: 'lato', sans-serif;
+}
+
+nav {
+    font-family: 'lato-light', sans-serif;
+}
+
+body {
+    font-family: 'lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5BB43;
+}
+
+header {
+    background: #F5BB43;
+    color: #ffffff;
+    padding: 20px 0 10px; /* Increased top padding from 10px to 20px */
+    text-align: center;
+    min-height: 100px;
+}
+
+.logo-title {
+    display: flex;                /* Use Flexbox for alignment */
+    align-items: center;          /* Center items vertically */
+    justify-content: center;      /* Center items horizontally */
+    margin-top: 10px; /* Added top margin */
+    margin-bottom: 20px; /* Kept existing bottom margin */
+}
+
+#logo {
+    width: 70px;                  /* Set a fixed width for the logo */
+    height: auto;                 /* Maintain aspect ratio */
+    margin-right: 10px;           /* Space between logo and title */
+    background-color: transparent; /* Ensure the logo background is transparent */
+}
+
+nav ul {
+    list-style: none;             /* Remove default list styles */
+    padding: 0;                   /* Remove padding */
+    margin: 0;                    /* Remove margin */
+}
+
+nav ul li {
+    display: inline;              /* Inline list items */
+    margin: 0 15px;               /* Space between list items */
+}
+
+nav a {
+    color: #ffffff;               /* Link color */
+    text-decoration: none;        /* Remove underline from links */
+}
+
+nav a {
+    white-space: nowrap;  /* Prevents text wrapping */
+}
+
+section {
+    padding: 20px;
+    margin: 10px; /* Keep consistent margins */
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #F5BB43;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Shared styling for blog entries and Instagram posts */
+.blog-entry, .instagram-post {
+    background-color: #f9f9f9;      /* Light background for both */
+    padding: 20px;                  /* Consistent padding */
+    margin-bottom: 20px;            /* Space between entries */
+    border-radius: 8px;             /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Title styling for both types */
+.blog-entry h3, .instagram-post h3 {
+    margin-bottom: 10px;
+    color: #35424a;                 /* Same color as the header */
+    font-size: 1.5em;               /* Slightly larger heading font */
+}
+
+/* Global box-sizing for better control */
+* {
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+}
+
+/* Instagram post specific adjustments */
+.instagram-post {
+    display: flex;                 /* Use flexbox for alignment */
+    flex-direction: column;       /* Stack items vertically */
+    align-items: flex-start;      /* Align items to the left */
+    width: 100%;                  /* Full width of the parent container */
+    overflow: hidden;             /* Prevent overflow from the container */
+}
+
+/* Ensuring the Instagram blockquote is responsive */
+.instagram-post blockquote {
+    width: 100%;                  /* Full width of the container */
+    max-width: 540px;             /* Limit max width */
+    margin: 0 auto;               /* Center blockquote */
+    padding: 0;                   /* Remove padding to prevent extra size */
+}
+
+/* Ensure responsiveness on mobile */
+@media (max-width: 600px) {
+    .instagram-post {
+        width: 50% !important;              /* Full width on smaller screens */
+        padding: 10px;            /* Adjust padding if necessary */
+    }
+
+    .instagram-post blockquote {
+        width: 50 !important;              /* Full width on smaller screens */
+        max-width: none;          /* Remove max-width constraint */
+    }
+
+    /* Ensure the Instagram embeds are responsive */
+.instadiv .instagram-media {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Optional: Remove left/right margins if any */
+.instadiv .instagram-media {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+}
+
+.logo-title h1 {
+    margin: 0; /* Ensures no extra spacing is added */
+}
+
+.logo-title h1 a {
+    text-decoration: none;
+    color: inherit;
+    display: inline;
+    cursor: pointer;
+}
+
+.logo-title h1 a:hover,
+.logo-title h1 a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #F5BB43;  /* Dark gray, almost black */
+    border-radius: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-right: 5px;  /* Increased from 10px to 15px */
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);  /* This makes the SVG white */
+}
+
+/* Add this new section for the layout */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px 0;  /* 10px vertical gap, 0 horizontal gap */
+    padding: 10px 20px;  /* Adjust this to match your text padding */
+    box-sizing: border-box;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;  /* Adjust if needed */
+    }
+}
+
+#blog {
+    background: transparent;
+    padding: 10px 10px 20px 10px; /* Top, Right, Bottom, Left */
+}
+
+#blog h2 {
+    color: #ffffff; /* Ensure this contrasts with your background */
+    text-align: left; /* Align text to the left */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 20px;
+    padding-left: 10px; /* Match the left padding of the section */
+}
+
+.blog-entry {
+    background: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Remove any box-shadow or additional styling on .blog-entry if it existed */
+
+/* Add this new media query */
+@media screen and (max-width: 600px) {
+    .contact-menu-item {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    nav ul li {
+        margin: 0;  /* Remove any existing margins */
+    }
+}
+
+/* Add this media query for mobile devices */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem; /* Adjust this value as needed */
+    }
+    
+    /* If you want to target specific titles, use more specific selectors */
+    #blog h2, 
+    section h2 {
+        font-size: 1.3rem; /* Adjust this value as needed */
+    }
+}
+
+/* Add this media query for mobile devices */
+@media screen and (max-width: 600px) {
+    /* Assuming your title is in a header and menu is in a nav element */
+    header {
+        margin-bottom: 10px; /* Reduced from 20px to 10px */
+    }
+
+    /* If your menu is not directly below the header, target it specifically */
+    nav {
+        margin-top: 20px; /* Keep this for space between title and menu */
+        margin-bottom: 10px; /* Reduced space below the menu */
+    }
+
+    /* If you're using a specific class for your title or menu, use those instead */
+    .logo-title {
+        margin-bottom: 20px;
+    }
+
+    .main-menu {
+        margin-top: 20px;
+    }
+}
+
+/* Target the first section or a specific class if you have one */
+section:first-of-type,
+.first-section {
+    margin-top: 5px; /* Reduced space above the first section */
+}
+
+/* Update the media query for mobile devices */
+@media screen and (max-width: 600px) {
+    header {
+        margin-bottom: 5px; /* Further reduced from 10px to 5px */
+        padding-bottom: 5px; /* Added to reduce space at the bottom of the header */
+    }
+
+    nav {
+        margin-top: 10px; /* Reduced from 15px to 10px */
+        margin-bottom: 5px; /* Kept the same */
+    }
+
+    section:first-of-type,
+    .first-section {
+        margin-top: 2px; /* Further reduced from 5px to 2px */
+    }
+
+    /* Optional: Adjust padding for the first section if needed */
+    section:first-of-type,
+    .first-section {
+        padding-top: 15px; /* Reduced from 20px (if it was set to that before) */
+    }
+}
+
+
+.instadiv {
+    width: 100%;
+    max-width: none;  /* Remove max-width constraint */
+    margin: 0;  /* Remove auto margins */
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure consistent padding for text content */
+section, #blog {
+    padding: 20px;  /* Adjust this value to match your desired padding */
+}
